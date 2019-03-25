@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+     Edit Student
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+
+<ion-item>
+  <ion-label position="floating" >Rollno.</ion-label>
+<ion-input  [(ngModel)]="student.rollno"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating" >First Name</ion-label>
+<ion-input  [(ngModel)]="student.firstName"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating" >Last Name</ion-label>
+<ion-input  [(ngModel)]="student.lastName"></ion-input>
+</ion-item>
+<ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime [(ngModel)]="student.birthDate" display-format="MMM DD, YYYY "></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>class</ion-label>
+    <ion-select value="brown" okText="Okay" [(ngModel)]="student.class" cancelText="Dismiss">
+      <ion-select-option value="1">1</ion-select-option>
+      <ion-select-option value="2">2</ion-select-option>
+      <ion-select-option value="3">3</ion-select-option>
+      <ion-select-option value="4">4</ion-select-option>
+    </ion-select>
+  </ion-item>
+    <!-- <ion-label position="floating" >subject</ion-label>
+  <ion-input  [(ngModel)]="student.subject"></ion-input> -->
+  <ion-item>
+    <ion-label>Subject</ion-label>
+    <ion-select value="brown" okText="Okay" [(ngModel)]="student.subject" cancelText="Dismiss">
+      <ion-select-option value="maths">maths</ion-select-option>
+      <ion-select-option value="science">science</ion-select-option>
+      <ion-select-option value="biology">biology</ion-select-option>
+      <ion-select-option value="english">english</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
+  
+  <ion-item>
+      <ion-label position="floating" >Teacher</ion-label>
+    <ion-input  [(ngModel)]="student.teacher"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating" >Address</ion-label>
+      <ion-input  [(ngModel)]="student.address"></ion-input>
+      </ion-item>
+
+<ion-button  (click)="update(student)">Add Customer</ion-button>
+
+</ion-content>
+
+
+  
